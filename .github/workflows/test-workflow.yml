@@ -17,3 +17,9 @@ jobs:                                                       # WE DEFINE HERE OUR
 
       - name: "STEP 4: Print current date"
         run: date
+
+      - name: "STEP 5: Simulate a failure"                  # WE ADD OUR FIRST FAILED TASK
+        run: exit 1
+
+      - name: "STEP 6: Check final run"
+        run: echo "You will see this if all the task are run perfectly"
