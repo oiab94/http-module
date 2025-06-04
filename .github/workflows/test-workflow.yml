@@ -6,5 +6,14 @@ jobs:  # WE DEFINE HERE OUR JOBS
   say-hello:  # WE DEFINE HERE OUR FIRST JOB NAME
     runs-on: ubuntu-latest  # WE RUNS IN THIS MACHINE
     steps:  # WE ADD OUR FIRST STEP
-      - name: "Say Hello"
+      - name: "STEP 1: Say Hello"
         run: echo "Hello, Github Actions!"
+      
+      - name: "STEP 2: Show our current directory"
+        run: pwd
+
+      - name: "STEP 3: List files"
+        run: ls -la
+
+      - name: "STEP 4: Print current date"
+        run: date
