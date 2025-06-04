@@ -1,0 +1,10 @@
+name: first-test-workflow  # THIS IS A NAME THAT WILL APPEAR IN THE ACTIONS TABS ON GITHUB
+
+on: [push]  # THIS MEANS THATH WORKFLOW WILL RUN EVERY TIME WE PUSH A CODE TO ANY BRANCH
+
+jobs:  # WE DEFINE HERE OUR JOBS
+  say-hello:  # WE DEFINE HERE OUR FIRST JOB NAME
+    runs-on: ubuntu-latest  # WE RUNS IN THIS MACHINE
+    steps:  # WE ADD OUR FIRST STEP
+      - name: "Say Hello"
+        run: echo "Hello, Github Actions!"
