@@ -1,0 +1,25 @@
+name: first-test-workflow                                   # THIS IS A NAME THAT WILL APPEAR IN THE ACTIONS TABS ON GITHUB
+
+on: [push]                                                  # THIS MEANS THATH WORKFLOW WILL RUN EVERY TIME WE PUSH A CODE TO ANY BRANCH
+
+jobs:                                                       # WE DEFINE HERE OUR JOBS
+  say-hello:                                                # WE DEFINE HERE OUR FIRST JOB NAME
+    runs-on: ubuntu-latest                                  # WE RUNS IN THIS MACHINE
+    steps:                                                  # WE ADD OUR FIRST STEP
+      - name: "STEP 1: Say Hello"
+        run: echo "Hello, Github Actions!"
+      
+      - name: "STEP 2: Show our current directory"
+        run: pwd
+
+      - name: "STEP 3: List files"
+        run: ls -la
+
+      - name: "STEP 4: Print current date"
+        run: date
+
+      - name: "STEP 5: Simulate a failure"                  # WE ADD OUR FIRST FAILED TASK
+        run: exit 1
+
+      - name: "STEP 6: Check final run"
+        run: echo "You will see this if all the task are run perfectly"
