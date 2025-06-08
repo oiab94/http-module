@@ -20,6 +20,7 @@ async function getIssueData() {
 				'Content-Type': 'application/json',
 			},
 		});
+
 	console.debug(`GET RESPONSE FROM FETCH: ${typeof response === 'object'}`);
 	const issues = await response.json()
 
@@ -28,7 +29,7 @@ async function getIssueData() {
 		return DEFAULT_ISSUE;
 	}
 
-	console.log(`RETURN ISSUE OBJECT: ${ issues !== undefined }`);
+	console.log(`RETURN ISSUE OBJECT: ${issues !== undefined}`);
 	return issues;
 }
 
@@ -50,7 +51,7 @@ function generatKey() {
 }
 
 /** Muestra en consola los issues */
-async function logIssues( issues ) {
+async function logIssues(issues) {
 	let issueData = await issues;
 
 	for (const issue of issueData) {
@@ -59,8 +60,8 @@ async function logIssues( issues ) {
 }
 
 /** EJECUTA MAIN */
-function main (){
-	logIssues(  getIssueData() );
+function main() {
+	logIssues(getIssueData());
 }
 
-( main )()
+(main)()
